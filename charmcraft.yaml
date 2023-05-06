@@ -17,5 +17,4 @@ parts:
     source-type: git
     plugin: dump
     organize:
-      '*': lib/juju-upgrader
-
+      '*': lib/juju-upgrader/
