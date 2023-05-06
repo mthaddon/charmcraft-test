@@ -1,0 +1,21 @@
+# This file configures Charmcraft.
+# See https://juju.is/docs/sdk/charmcraft-config for guidance.
+
+type: charm
+bases:
+  - build-on:
+    - name: ubuntu
+      channel: "22.04"
+    run-on:
+    - name: ubuntu
+      channel: "22.04"
+parts:
+  git-stuff:
+    source: https://git.launchpad.net/juju-upgrader
+    source-depth: 1
+    source-branch: master
+    source-type: git
+    plugin: dump
+    organize:
+      '*': lib/juju-upgrader
+
